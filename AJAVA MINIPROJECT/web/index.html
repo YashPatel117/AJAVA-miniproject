@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        table td { 
+            padding-top: 5px;
+        }
+    </style>
+    <body>
+        <form action="NewServlet" method="POST">
+            <table>
+                <tr>
+                    <td>Full Name : </td>
+                </tr>
+                <tr>
+                    <td><input type="text"  name="fname" id="fname"><br><label for="fname" style="font-size: 60%; padding-left: 30%;"  >First Name</label></td>
+                    <td><input type="text"  name="lname" id="lname"><br><label for="lame" style="font-size: 60%; padding-left: 30%;"  >Last Name</label></td>
+                </tr>
+                <tr>
+                    <td>Job : </td>
+                    <td><select name="job" id="job" value="Select Job">
+                        <option value="Web Devloper">Web Devloper</option>
+                        <option value="Application Devloper">Application Devloper"</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Education :</td>
+                    <td><input type="text" name="edu"  id="myTextarea1" value="DEGREE/COURCE/COLLEGECOLLEGE" maxlength="42" style="color: gray;" onclick="if(this.value=='DEGREE/COURCE/COLLEGECOLLEGEin LDCE'){this.value='';this.style.color='black';}"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Cource time :</td>
+                    <td>From : <input type="number" value="2000" name="cf" style="width: 45px;"></td>
+                    <td>To : <input type="number" value="2000" name="ct" style="width: 45px;"></td>
+                </tr>
+                <tr>
+                    <td>About cource : </td>
+                    <td><textarea name="course" id="myTextarea2" cols="30" rows="4" maxlength="235"></textarea></td>
+                </tr>
+                <tr>
+                    <td> Work Experience :</td>
+                    <td>1) From : <input type="number" value="2000" name="wf1" style="width: 45px;"> &nbsp; To : <input type="number" value="2000" style="width: 45px;" name="wt1"></td>
+                    <td rowspan="2"><textarea name="we1" id="myTextarea3" cols="30" rows="4"></textarea></td>
+                </tr>
+                <tr><td> </td>
+                <td>Company Name: <input type="text" name="cn1"  id="myTextarea1"  </td></tr>
+                <tr><td> </td><td>2) From : <input type="number" name="wf2" value="2000" style="width: 45px;">&nbsp; To : <input type="number" value="2000" style="width: 45px;" name="wt2"></td>
+                    <td rowspan="2"><textarea name="we2" id="myTextarea3" cols="30" rows="4" ></textarea></td></tr>
+                <tr><td> </td>
+                <td>Company Name: <input type="text" name="cn2"  id="myTextarea1"  </td></tr>
+
+                <tr>
+                    <td>Address : </td>
+                    <td><textarea name="add" id="myTextarea4" cols="30" rows="4" ></textarea></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.</td>
+                    <td><input type="number" name="mo" ></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email" name="email" id=""></td>
+                </tr>
+                <tr>
+                    <td>Skills :</td>
+                    <td>1) <input type="text" name="sk1"> <input type="text" name="sk1p"  style="width: 40px;"> (out of 100%)</td>
+                </tr>
+                <tr><td>(Any Four)</td><td>2) <input type="text" name="sk2"> <input type="text" name="sk2p"  style="width: 40px;"> (out of 100%)</td></tr>
+                <tr><td></td><td>3) <input type="text" name="sk3"> <input type="text" name="sk3p"  style="width: 40px;"> (out of 100%)</td></tr>
+                <tr><td></td><td>4) <input type="text" name="sk4"> <input type="text" name="sk4p"  style="width: 40px;"> (out of 100%)</td></tr>
+                <tr>
+                    <td>Language : </td>
+                    <td>1) <input type="text" name="l1"></td>
+                </tr>
+                <tr>
+                    <td> (Any Two) </td>
+                    <td>2) <input type="text" name="l2"></td>
+                </tr>
+                <tr>
+                    <td>Upload Image : </td>
+                    <td><input type="file" name="photo" ></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Clear"></td>
+                </tr>
+            </table>
+    </form>
+    <script>
+        var textarea1 = document.getElementById("myTextarea1");
+        var maxLength1 = 42;
+
+        textarea1.addEventListener("input", function() {
+            if (textarea1.value.length > maxLength1) {
+            textarea1.value = textarea1.value.slice(0, maxLength1);
+            }
+        });
+        var myTextarea2 = document.getElementById("myTextarea2");
+        var maxLength2 = 235;
+
+        myTextarea2.addEventListener("input", function() {
+            if (myTextarea2.value.length > maxLength2) {
+            myTextarea2.value = myTextarea2.value.slice(0, maxLength2);
+            }
+        });
+        var myTextarea3 = document.getElementById("myTextarea3");
+        var maxLength3 = 157;
+
+        myTextarea3.addEventListener("input", function() {
+            if (myTextarea3.value.length > maxLength3) {
+            textarea3.value = textarea3.value.slice(0, maxLength3);
+            }
+        });
+        var myTextarea4 = document.getElementById("myTextarea4");
+        var maxLength3 = 60;
+
+        myTextarea4.addEventListener("input", function() {
+            if (myTextarea4.value.length > maxLength4) {
+            textarea4.value = textarea4.value.slice(0, maxLength4);
+            }
+        });
+</script>
+    </body>
+</html>
